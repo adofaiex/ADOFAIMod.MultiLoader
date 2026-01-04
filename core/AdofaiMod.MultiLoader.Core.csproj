@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AdofaiMod.MultiLoader</RootNamespace>
+    <AssemblyName>AdofaiMod.MultiLoader.Core</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <Description>ADOFAI Multi-Loader Mod Template</Description>
+    <Company>Your Name</Company>
+    <Version>1.0.0</Version>
+    <Copyright>Copyright © 2026 Your Name</Copyright>
+    <OutputPath>..\bin\$(Configuration)\core\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <IsCoreProject>true</IsCoreProject>
+    <GameExePath>GAME_EXE_PATH_PLACEHOLDER</GameExePath>
+    <ManagedAssembliesDir Condition="'$(GameExePath)' != '' AND '$(GameExePath)' != 'GAME_EXE_PATH_PLACEHOLDER'">$([System.IO.Path]::GetDirectoryName($(GameExePath)))\$([System.IO.Path]::GetFileNameWithoutExtension($(GameExePath)))_Data\Managed</ManagedAssembliesDir>
+  </PropertyGroup>
+
+  <Import Project="..\ADOFAIMod.targets" Condition="Exists('..\ADOFAIMod.targets')" />
+
+  <ItemGroup>
+    <PackageReference Include="HarmonyX" Version="2.10.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>$(ManagedAssembliesDir)\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(ManagedAssembliesDir)\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(ManagedAssembliesDir)\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(ManagedAssembliesDir)\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(ManagedAssembliesDir)\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(ManagedAssembliesDir)\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(ManagedAssembliesDir)\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>$(ManagedAssembliesDir)\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
