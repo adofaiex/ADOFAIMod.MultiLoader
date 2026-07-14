@@ -26,7 +26,7 @@
 
   <ItemGroup>
     <Content Include="**\*"
-             Exclude="**\bin\**;**\.gitignore;**\TestModProject\**;**\obj\**;**\out\**;**\dist\**;**\.vs\**;**\.idea\**;**\.git\**;**\*.user;**\*.suo;**\*.sln;**\*.sln.DotSettings.user;**\*.nupkg;**\*.snupkg;**\AdofaiMod.MultiLoader.Template.csproj;**\README.md" />
+             Exclude="**\bin\**;**\.gitignore;**\TestModProject\**;**\obj\**;**\out\**;**\dist\**;**\.vs\**;**\.idea\**;**\.git\**;**\*.user;**\*.suo;**\*.sln;**\*.sln.DotSettings.user;**\*.nupkg;**\*.snupkg;**\AdofaiMod.MultiLoader.Template.csproj;**\README.md;**\init.*" />
     <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 

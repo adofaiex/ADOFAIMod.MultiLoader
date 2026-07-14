@@ -160,6 +160,23 @@ scripts/pack.ps1      # PowerShell
 4. 资源文件放入 `Resources/`，使用 `ResourceLoader` 加载。
 5. 使用对应加载器构建，在游戏中测试。
 
+## GitHub 模板
+
+本仓库也可以作为 GitHub 模板使用。在仓库页面点击 "Use this template"
+创建新仓库，然后克隆并运行初始化脚本，项目会自动按仓库名称重命名：
+
+```bash
+# Linux / macOS
+chmod +x init.sh
+./init.sh
+
+# Windows (PowerShell)
+.\init.ps1
+```
+
+初始化脚本会自动读取仓库目录名，替换所有文件中的旧名称、重命名文件
+和目录，并重新初始化 Git 历史。
+
 ## 卸载模板
 
 ```bash

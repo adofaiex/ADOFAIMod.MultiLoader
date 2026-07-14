@@ -161,6 +161,25 @@ Each archive is self-contained: extract directly into the game directory.
 4. Place assets in `Resources/` and load them with `ResourceLoader`.
 5. Build with your chosen loader to test in-game.
 
+## GitHub Template
+
+This repository can also be used as a GitHub template. Click "Use this template"
+on the repository page to create a new repository, then clone it and run the
+init script to rename the project to match your repository name:
+
+```bash
+# Linux / macOS
+chmod +x init.sh
+./init.sh
+
+# Windows (PowerShell)
+.\init.ps1
+```
+
+The init script automatically detects the repository directory name and renames
+all files and namespaces accordingly. It also re-initializes the Git history
+with a clean initial commit.
+
 ## Uninstall the Template
 
 ```bash
